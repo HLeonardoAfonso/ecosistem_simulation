@@ -2,8 +2,8 @@ public class Animal extends Entidade {
 
     private int energy;
 
-    public Animal(int x, int y, int age, int maxAge, int eValue, int initialEnergy){
-        super(x, y, age, maxAge, eValue);
+    public Animal(int x, int y, int age, int maxAge, int eValue, int initialEnergy, String letter){
+        super(x, y, age, maxAge, eValue, letter);
         energy = initialEnergy;
     }
     public int getEnergy() { return energy; }
