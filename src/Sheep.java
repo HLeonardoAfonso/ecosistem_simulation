@@ -15,9 +15,7 @@ public class Sheep extends Animal{
     };
 
     @Override
-    public boolean canDestroy(Entidade e) {
-        return false;
-    }
+    public boolean canDestroy(Entidade e) { return false; }
 
     @Override
     public Entidade createNew(int x, int y){

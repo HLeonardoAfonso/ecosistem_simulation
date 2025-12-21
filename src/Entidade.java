@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 
 abstract class Entidade {
 
@@ -8,16 +7,14 @@ abstract class Entidade {
     private int age;
     private int max_age;
     private int energy_value;
-    private int reproducing_energy_cost;
     private String letter;
 
-    public Entidade(int x, int y, int age, int maxAge, int eValue, int eRepro, String letter) {
+    public Entidade(int x, int y, int age, int maxAge, int eValue, String letter) {
         pos_x = x;
         pos_y = y;
         this.age = age;
         this.max_age = maxAge;
         this.energy_value = eValue;
-        this.reproducing_energy_cost = eRepro;
         this.letter = letter;
     }
 
@@ -38,7 +35,6 @@ abstract class Entidade {
     public void aging() { age++; }                                  // add one to the age of entity per timeStep
     // energy
     public int getEnergyValue() { return energy_value; }
-    public int getReproducingCost() { return reproducing_energy_cost; }
     // letter
     public String getLetter() { return letter; }
 

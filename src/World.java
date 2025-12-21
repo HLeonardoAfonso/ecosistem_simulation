@@ -50,7 +50,7 @@ public class World {
                     // reproduce -- if entity in destination location is same species
                     if (((Animal) e).canReproduce(destinationEntity)){
                         //if energy  bigger than needed
-                        if (((Animal) e).getEnergy() > e.getReproducingCost()) {
+                        if (((Animal) e).getEnergy() > ((Animal) e).getReproducingCost()) {
                             //is there space in adjacent location
                             int emptyDirection = e.findEmptyLocation(entityList);
                             // if return -1 entity is surrounded, no empty space
@@ -60,7 +60,7 @@ public class World {
                                 newEntity.newLocation(emptyDirection);                  // move to location
                                 entityList.add(newEntity);
                                 // remove energy for reproducing
-                                ((Animal) e).reproducingCost(e.getReproducingCost());
+                                ((Animal) e).reproducingCost(((Animal) e).getReproducingCost());
                             }
                         }
                     }

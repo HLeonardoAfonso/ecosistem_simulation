@@ -3,12 +3,15 @@ import java.util.ArrayList;
 abstract class Animal extends Entidade {
 
     private int energy;
+    private int reproducing_energy_cost;
 
     public Animal(int x, int y, int age, int maxAge, int eValue, int initialEnergy, int reproduceEnergyCost, String letter){
-        super(x, y, age, maxAge, eValue, reproduceEnergyCost, letter);
+        super(x, y, age, maxAge, eValue, letter);
         energy = initialEnergy;
+        this. reproducing_energy_cost = reproduceEnergyCost;
     }
     public int getEnergy() { return energy; }
+    public int getReproducingCost() { return reproducing_energy_cost; }
 
     // update energy when eating entity
     public void addEnergy(int e) { energy += e; }

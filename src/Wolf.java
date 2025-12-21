@@ -15,9 +15,7 @@ public class Wolf extends Animal{
     };
 
     @Override
-    public boolean canDestroy(Entidade e) {
-        return e instanceof Plant;
-    }
+    public boolean canDestroy(Entidade e) { return e instanceof Plant; }
 
     @Override
     public Entidade createNew(int x, int y){
